@@ -33,7 +33,7 @@ class UrlsService {
     return newUrl;
   }
 
-  async getAllUrls() {
+  async getUrls() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
           resolve(this.urls.splice(this.urls.length-this.nDataGet, this.urls.length));
@@ -42,7 +42,7 @@ class UrlsService {
     //return this.urls;
   }
 
-  async getUrls() {
+  async getAllUrls() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
           resolve(this.urls);
