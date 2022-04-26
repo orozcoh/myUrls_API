@@ -15,8 +15,9 @@ router.get('/', async (req,res) => {
   res.json(urls);
 });
 
-router.get('/filter', async (req,res) => {
-  res.json("SOY FILTRO");
+router.get('/get-all', async (req,res) => {
+  const url_list = await urls_service.getAllUrls();
+  res.json(url_list);
 });
 
 router.get('/:id', async (req,res, next) => {

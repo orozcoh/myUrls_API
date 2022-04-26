@@ -2,6 +2,7 @@
 class UrlsService {
 
   constructor() {
+    this.nDataGet = 60;
     this.last_id = -1;
     this.urls = [];
     this.create_1st_block();
@@ -13,13 +14,9 @@ class UrlsService {
         id: this.last_id + 1, //faker.datatype.uuid(),
         timestamp: timestamp,
         url: "https://santiago.orozcoh.com/",
-        note: "Una memoria virtual"
+        note: "Una memoria digital"
     });
     this.last_id += 1;
-  }
-
-  getDbSize(){
-    return this.urls.length;
   }
 
   async create(data) {
@@ -36,13 +33,14 @@ class UrlsService {
     return newUrl;
   }
 
-//   find () {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve(this.products);
-//         }, 500);
-//     });
-// }
+  async getAllUrls() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+          resolve(this.urls.splice(this.urls.length-this.nDataGet, this.urls.length));
+      }, 100);
+    });
+    //return this.urls;
+  }
 
   async getUrls() {
     return new Promise((resolve, reject) => {

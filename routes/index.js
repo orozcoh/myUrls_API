@@ -7,7 +7,7 @@ const urlsRouter = require('./urls.router');
 
 function routerApi_v1(app) {
     const router = express.Router();
-    app.use('/api/v1', router);
+    app.use('/v1', router);
     router.use('/urls', urlsRouter);
     //router.use('/users', usersRouter);
     //router.use('/categories', categoriesRouter);

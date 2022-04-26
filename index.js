@@ -10,8 +10,6 @@ app.use(express.json());
 routerApi_v1(app);
 // -------------------------------- START ------------------------------------
 
-
-
 app.get('/', (req,res) => {
     try {  
         var fs = require('fs');
@@ -24,11 +22,7 @@ app.get('/', (req,res) => {
     }
 });
 
-app.get('/cv', (req,res) => {
-    res.send('Soy el Curriculum Vitae de Santiago Orozco H<p>Posible redireccionamiento a LinkedIn</p>');
-});
-
 //---------------------------------- END --------------------------------------
 app.listen(port, () => {
-    console.log('Server running in port:' + port);
+    console.log('Server running in PORT:' + port);
 });
