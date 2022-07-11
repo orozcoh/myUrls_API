@@ -7,7 +7,12 @@ const port = 3000;
 
 app.use(express.json());
 
+whiteList_ApiKeys = ["test1",];
+
+whiteList_Users = ["admin"];
+
 routerApi_v1(app);
+
 // -------------------------------- START ------------------------------------
 
 app.get('/', (req,res) => {
@@ -18,7 +23,7 @@ app.get('/', (req,res) => {
         //console.log(tree_data.toString());  
         res.send(tree_data);  
     } catch(e) {
-        console.log('Error:', e.stack);
+        //console.log('Error:', e.stack);
     }
 });
 

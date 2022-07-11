@@ -2,8 +2,9 @@
 <html>
 <head>
     <title>
-        myUrls
+        DataLogger
     </title>
+
     <style>
         .tab1 {
             tab-size: 2;
@@ -20,28 +21,33 @@
 </head>
 <body>
     <h1 style="color: green">api2.orozcoh.com:3000</h1>
-    <b>Arbol de rutas de esta API</b>
+    Arbol de rutas de esta API dedicada a guardar<br> Urls varias</b>
 
-    <b><pre class="tab1">  - v1/urls/:id</pre></b>
-    <pre class="tab2">      - GET (Last 60 logs)</pre>
-    <pre class="tab2">      - GET + {id}</pre>
-    <pre class="tab2">      - POST </pre>
-    <pre class="tab2">      - PATCH + {id}</pre>
-    <pre class="tab2">      - DELETE + {id}</pre>
+    <section>
+        -------------------------------------------------------------------------------<br>
+    </section>
+    <b><pre class="tab1">PUBLIC:</pre></b>
+    <b><pre class="tab1">  - api2.orozcoh.com:3000/v1/urls <a href="http://api2.orozcoh.com:3000/v1/urls"><button>GET</button></a></pre></b>
+    <!-- <b><pre><a href="http://bitdegree.org"><button>Click me!</button></a></pre></b> -->
 
-    <!-- <b><pre class="tab1">  - v1/urls/categories/</pre></b>
-    <pre class="tab2">      - GET</pre>
-    <pre class="tab2">      - GET + {id}</pre>
-    <pre class="tab2">      - POST </pre>
-    <pre class="tab2">      - PATCH + {id}</pre>
-    <pre class="tab2">      - DELETE + {id}</pre>
-
-    <b><pre class="tab1">  - v1/users/</pre></b>
-    <pre class="tab2">      - GET</pre>
-    <pre class="tab2">      - GET + {id}</pre>
-    <pre class="tab2">      - POST </pre>
-    <pre class="tab2">      - PATCH + {id}</pre>
-    <pre class="tab2">      - DELETE + {id}</pre> -->
+    <pre class="tab2">      <b>- GET</b>: Last 60 logs</pre>
+    <br><b><pre class="tab1">  - api2.orozcoh.com:3000/v1/urls/{id} <a href="http://api2.orozcoh.com:3000/v1/urls/0"><button>GET</button></a></pre></b>
+    <pre class="tab2">      <b>- GET</b>: Get the data of the ID given</pre>
+    <br><b><pre class="tab1">  - api2.orozcoh.com:3000/v1/urls/getAll <a href="http://api2.orozcoh.com:3000/v1/urls/getAll"><button>GET</button></a></pre></b>
+    <pre class="tab2">      <b>- GET</b>: All urls POSTed</pre>
+    <br><b><pre class="tab1">  - api2.orozcoh.com:3000/v1/urls/getLast <a href="http://api2.orozcoh.com:3000/v1/urls/getLast"><button>GET</button></a></pre></b>
+    <pre class="tab2">      <b>- GET</b>: Last url POSTed</pre>
+    <br><b><pre class="tab1">  - api2.orozcoh.com:3000/v1/urls/lastUpdated <a href="http://api2.orozcoh.com:3000/v1/urls/lastUpdated"><button>GET</button></a></pre></b>
+    <pre class="tab2">      <b>- GET</b>: Time of last update</pre>
+    <section>
+        --------------------------------------------------------------------------------<br><br>
+    </section>
+    <b><pre class="tab1">ALLOWED USERS:</pre></b>
+    <b><pre class="tab1">  - api2.orozcoh.com:3000/v1/urls</pre></b>
+    <pre class="tab2">      <b>- POST</b>: Only for allowed devices with API_KEY </pre>
+    <b><pre class="tab1">  - api2.orozcoh.com:3000/v1/urls/{timestamp}</pre></b>
+    <pre class="tab2">      <b>- PATCH</b>: Update info (in this data logger, this should not be possible)</pre>
+    <pre class="tab2">      <b>- DELETE</b>: Delete selected data (in this data logger, this should not be possible)</pre>
       
 </body>
 </html>
