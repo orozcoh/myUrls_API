@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 
 const mySchema = new Schema({
   user: String,
-  id: Number,
+  id: String,
+  type: String,
   url: String,
   title: String,
   author: String,
